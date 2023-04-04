@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-success">
@@ -22,8 +24,8 @@
                         <input type="text" id="search-input" class="form-control d-none" placeholder="Rechercher">
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fas fa-filter"></i></a>
-                    </li>
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#filterModal"><i class="fas fa-filter"></i></a>
+                    </li>                      
                 </ul>
             </div>
         </nav>
@@ -34,7 +36,8 @@
 
             <div class="col-md-4 mb-3">
                 <div class="card">
-                    <img src="https://images.pexels.com/photos/1400171/pexels-photo-1400171.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Nom du fruit ou légume">
+                    <img src="https://images.pexels.com/photos/1400171/pexels-photo-1400171.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        class="card-img-top" alt="Nom du fruit ou légume">
                     <div class="card-body">
                         <h5 class="card-title">Nom du fruit ou légume</h5>
                     </div>
@@ -43,16 +46,8 @@
 
             <div class="col-md-4 mb-3">
                 <div class="card">
-                    <img src="https://images.pexels.com/photos/1400171/pexels-photo-1400171.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Nom du fruit ou légume">
-                    <div class="card-body">
-                        <h5 class="card-title">Nom du fruit ou légume</h5>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-4 mb-3">
-                <div class="card">
-                    <img src="https://images.pexels.com/photos/1400171/pexels-photo-1400171.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Nom du fruit ou légume">
+                    <img src="https://images.pexels.com/photos/1400171/pexels-photo-1400171.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        class="card-img-top" alt="Nom du fruit ou légume">
                     <div class="card-body">
                         <h5 class="card-title">Nom du fruit ou légume</h5>
                     </div>
@@ -61,16 +56,28 @@
 
             <div class="col-md-4 mb-3">
                 <div class="card">
-                    <img src="https://images.pexels.com/photos/1400171/pexels-photo-1400171.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Nom du fruit ou légume">
+                    <img src="https://images.pexels.com/photos/1400171/pexels-photo-1400171.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        class="card-img-top" alt="Nom du fruit ou légume">
                     <div class="card-body">
                         <h5 class="card-title">Nom du fruit ou légume</h5>
                     </div>
                 </div>
             </div>
-            
+
             <div class="col-md-4 mb-3">
                 <div class="card">
-                    <img src="https://images.pexels.com/photos/1400171/pexels-photo-1400171.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Nom du fruit ou légume">
+                    <img src="https://images.pexels.com/photos/1400171/pexels-photo-1400171.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        class="card-img-top" alt="Nom du fruit ou légume">
+                    <div class="card-body">
+                        <h5 class="card-title">Nom du fruit ou légume</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <img src="https://images.pexels.com/photos/1400171/pexels-photo-1400171.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        class="card-img-top" alt="Nom du fruit ou légume">
                     <div class="card-body">
                         <h5 class="card-title">Nom du fruit ou légume</h5>
                     </div>
@@ -86,4 +93,60 @@
     <script src="https://kit.fontawesome.com/c64f7de89c.js" crossorigin="anonymous"></script>
     <script src="scripts.js"></script>
 </body>
+
+<!-- Filter Modal -->
+<div class="modal fade" id="filterModal" tabindex="-1" role="dialog" aria-labelledby="filterModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="filterModalLabel">Filtres</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="saisonnalite">Saisonnalité</label>
+                        <select class="form-control" id="saisonnalite">
+                            <option value="all" selected>Toutes</option>
+                            <option value="in-season">De saison</option>
+                            <option value="out-season">Hors saison</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="localite">Localité</label>
+                        <select class="form-control" id="localite">
+                            <option value="all" selected>Toutes</option>
+                            <option value="france">France</option>
+                            <option value="outside-france">Hors France</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="type-agriculture">Type d'agriculture</label>
+                        <select class="form-control" id="type-agriculture">
+                            <option value="all" selected>Tous</option>
+                            <option value="bio">Biologique</option>
+                            <option value="non-bio">Non biologique</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="prix">Prix</label>
+                        <select class="form-control" id="prix">
+                            <option value="all" selected>Tous</option>
+                            <option value="low">Actuellement bas</option>
+                            <option value="high">Actuellement hauts</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                <button type="button" class="btn btn-primary" id="apply-filters">Appliquer les filtres</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 </html>

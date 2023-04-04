@@ -21,3 +21,42 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+const applyFiltersButton = document.getElementById('apply-filters');
+const saisonnaliteSelect = document.getElementById('saisonnalite');
+const localiteSelect = document.getElementById('localite');
+const typeAgricultureSelect = document.getElementById('type-agriculture');
+const prixSelect = document.getElementById('prix');
+
+applyFiltersButton.addEventListener('click', () => {
+  const saisonnalite = saisonnaliteSelect.value;
+  const localite = localiteSelect.value;
+  const typeAgriculture = typeAgricultureSelect.value;
+  const prix = prixSelect.value;
+
+  // Appliquez vos filtres en fonction des valeurs sélectionnées
+  // Vous devrez ajouter des attributs de données ou des classes aux éléments de la carte pour pouvoir les filtrer en fonction des critères sélectionnés
+
+  // Exemple : Ajoutez des attributs de données aux éléments de la carte, tels que data-saisonnalite="in-season", data-localite="france", etc.
+
+  for (const card of cards) {
+    const cardSaisonnalite = card.getAttribute('data-saisonnalite');
+    const cardLocalite = card.getAttribute('data-localite');
+    const cardTypeAgriculture = card.getAttribute('data-type-agriculture');
+    const cardPrix = card.getAttribute('data-prix');
+
+    const showCard = (saisonnalite === 'all' || saisonnalite === cardSaisonnalite) &&
+                     (localite === 'all' || localite === cardLocalite) &&
+                     (typeAgriculture === 'all' || typeAgriculture === cardTypeAgriculture) &&
+                     (prix === 'all' || prix === cardPrix);
+
+    if (showCard) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  }
+
+  // Fermez le modal une fois les filtres appliqués
+  $('#filterModal').modal('hide');
+});
