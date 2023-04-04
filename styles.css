@@ -13,7 +13,7 @@ header {
 .title {
     font-family: Calibri, sans-serif;
     font-size: 2rem;
-    color: #ffffff!important;
+    color: #ffffff !important;
     font-weight: bold;
     margin: 0 auto;
 }
@@ -30,12 +30,14 @@ header {
 
 #search-input {
     width: 0;
+    height: 25px;
     background-color: transparent;
     border: none;
     color: white;
     outline: none;
     transition: width 0.3s ease-in-out;
 }
+
 
 #search-input.d-none {
     display: none;
@@ -44,4 +46,14 @@ header {
 #search-input:focus {
     background-color: rgba(255, 255, 255, 0.1);
     width: 200px;
+}
+
+.btn-apply-filters {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-apply-filters:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
 }

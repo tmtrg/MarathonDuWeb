@@ -21,11 +21,12 @@
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="#"><i class="fas fa-search"></i></a>
-                        <input type="text" id="search-input" class="form-control d-none" placeholder="Rechercher">
+                        <input type="text" id="search-input" class="form-control d-none" placeholder="Rechercher" autocomplete="off">
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" data-toggle="modal" data-target="#filterModal"><i class="fas fa-filter"></i></a>
-                    </li>                      
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#filterModal"><i
+                                class="fas fa-filter"></i></a>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -142,8 +143,8 @@
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-                <button type="button" class="btn btn-primary" id="apply-filters">Appliquer les filtres</button>
+                <button type="button" class="btn btn-apply-filters text-white" id="apply-filters">Appliquer les
+                    filtres</button>
             </div>
         </div>
     </div>
