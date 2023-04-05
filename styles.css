@@ -6,7 +6,16 @@ header {
     margin-bottom: 2rem;
 }
 
+.card-img-top {
+    height: 300px; /* Hauteur souhaitée pour les images */
+    object-fit: cover; /* Redimensionnement de l'image pour s'adapter à la taille définie tout en conservant son aspect */
+}
+
 .card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     cursor: pointer;
 }
 
@@ -28,8 +37,7 @@ header {
 .logo {
     width: 50px;
     height: 50px;
-    padding-top: 0%;
-    margin-bottom: 20px;
+    padding-bottom: 1%;
     margin: 0%;
 }
 
