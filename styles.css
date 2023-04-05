@@ -7,8 +7,11 @@ header {
 }
 
 .card-img-top {
-    height: 300px; /* Hauteur souhaitée pour les images */
-    object-fit: cover; /* Redimensionnement de l'image pour s'adapter à la taille définie tout en conservant son aspect */
+    height: 300px;
+    /* Hauteur souhaitée pour les images */
+    object-fit: cover;
+    /* Redimensionnement de l'image pour s'adapter à la taille définie tout en conservant son aspect */
+    border-radius: 15%;
 }
 
 .card {
@@ -20,15 +23,16 @@ header {
     width: 300px;
     height: 300px;
     margin: 10px;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 15%;
 }
-  
+
 
 #flexbox {
     display: flex;
     justify-content: space-between;
-    align-items: end;    
+    align-items: end;
 }
 
 .title {
@@ -85,4 +89,18 @@ header {
 .btn-apply-filters:hover {
     background-color: #218838;
     border-color: #1e7e34;
+}
+
+.btn-back {
+    background-color: #28a745; /* La couleur de fond vert de la bande supérieure */
+    border: none;
+    padding: 8px 16px;
+    margin: 20px;
+    font-size: 16px;
+    position: relative;
+}
+
+.btn-back:hover {
+    background-color: #218838; /* Une nuance plus foncée de vert pour l'effet de survol */
+    text-decoration: none;
 }
