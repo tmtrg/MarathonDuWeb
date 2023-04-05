@@ -117,6 +117,10 @@ function chargerDonnees(categorie) {
         // Ajoutez d'autres variétés ici
     ];
 
+    // Récupérer l'URL de l'image pour la catégorie sélectionnée
+    const selectedCard = document.querySelector(`.card img[src$="${categorie}"]`);
+    const imageUrl = selectedCard.getAttribute('src');
+
     // Sélectionnez l'élément HTML où vous voulez afficher les données
     const conteneur = document.getElementById('conteneur');
 
@@ -128,7 +132,7 @@ function chargerDonnees(categorie) {
         const divGraphique = document.createElement('div');
 
         // Ajoutez les attributs et le contenu aux éléments créés
-        img.src = `images/${categorie}/${produit.nom}.jpg`; // Assurez-vous d'avoir les images correspondantes dans votre dossier 'images'
+        img.src = imageUrl;
         img.alt = produit.nom;
 
         divDetails.innerHTML = `
