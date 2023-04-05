@@ -1,29 +1,42 @@
+<!-- Déclaration du type de document HTML -->
 <!DOCTYPE html>
 <html lang="fr">
 
 <head>
+    <!-- Encodage des caractères en UTF-8 -->
     <meta charset="UTF-8">
+    <!-- Configuration de la fenêtre d'affichage pour les appareils mobiles -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Titre de la page -->
     <title>SmartHarvest</title>
+    <!-- Lien vers la bibliothèque CSS de Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Lien vers le fichier CSS personnalisé -->
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+    <!-- En-tête de la page -->
     <header>
+        <!-- Barre de navigation -->
         <nav class="navbar navbar-expand-lg navbar-light bg-success">
             <div class="container">
                 <div class="row w-100">
                     <div class="col text-center">
+                        <!-- Titre de la barre de navigation -->
                         <h1 class="navbar-brand mb-0 title">SmartHarvest</h1>
                     </div>
                 </div>
+                <!-- Éléments de la barre de navigation -->
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
+                        <!-- Icône de recherche -->
                         <a class="nav-link" href="#"><i class="fas fa-search"></i></a>
+                        <!-- Champ de recherche -->
                         <input type="text" id="search-input" class="form-control d-none" placeholder="Rechercher" autocomplete="off">
                     </li>
                     <li class="nav-item">
+                        <!-- Icône pour ouvrir la fenêtre modale des filtres -->
                         <a class="nav-link" href="#" data-toggle="modal" data-target="#filterModal"><i
                                 class="fas fa-filter"></i></a>
                     </li>
@@ -32,9 +45,12 @@
         </nav>
     </header>
 
+    <!-- Contenu principal de la page -->
     <main class="container">
+        <!-- Grille pour afficher les fruits et légumes -->
         <section class="row">
 
+            <!-- Première colonne -->
             <div class="col-md-4 mb-3">
                 <div class="card">
                     <img src="https://images.pexels.com/photos/1400171/pexels-photo-1400171.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
@@ -84,32 +100,49 @@
                     </div>
                 </div>
             </div>
+
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <img src="https://images.pexels.com/photos/1400171/pexels-photo-1400171.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                        class="card-img-top" alt="Nom du fruit ou légume">
+                    <div class="card-body">
+                        <h5 class="card-title">Nom du fruit ou légume</h5>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Répéter les colonnes pour afficher d'autres fruits et légumes -->
 
         </section>
     </main>
 
+    <!-- Liens vers les bibliothèques JavaScript -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/c64f7de89c.js" crossorigin="anonymous"></script>
+    <!-- Lien vers le fichier JavaScript personnalisé -->
     <script src="scripts.js"></script>
 </body>
 
-<!-- Filter Modal -->
+<!-- Fenêtre modale pour les filtres -->
 <div class="modal fade" id="filterModal" tabindex="-1" role="dialog" aria-labelledby="filterModalLabel"
     aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="filterModalLabel">Filtres</h5>
+                <!-- Bouton pour fermer la fenêtre modale -->
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
+                <!-- Formulaire de filtres -->
                 <form>
                     <div class="form-group">
                         <label for="saisonnalite">Saisonnalité</label>
+                        <!-- Sélection de la saisonnalité -->
                         <select class="form-control" id="saisonnalite">
                             <option value="all" selected>Toutes</option>
                             <option value="in-season">De saison</option>
@@ -118,6 +151,7 @@
                     </div>
                     <div class="form-group">
                         <label for="localite">Localité</label>
+                        <!-- Sélection de la localité -->
                         <select class="form-control" id="localite">
                             <option value="all" selected>Toutes</option>
                             <option value="france">France</option>
@@ -126,6 +160,7 @@
                     </div>
                     <div class="form-group">
                         <label for="type-agriculture">Type d'agriculture</label>
+                        <!-- Sélection du type d'agriculture -->
                         <select class="form-control" id="type-agriculture">
                             <option value="all" selected>Tous</option>
                             <option value="bio">Biologique</option>
@@ -134,6 +169,7 @@
                     </div>
                     <div class="form-group">
                         <label for="prix">Prix</label>
+                        <!-- Sélection de la plage de prix -->
                         <select class="form-control" id="prix">
                             <option value="all" selected>Tous</option>
                             <option value="low">Actuellement bas</option>
@@ -143,6 +179,7 @@
                 </form>
             </div>
             <div class="modal-footer">
+                <!-- Bouton pour appliquer les filtres -->
                 <button type="button" class="btn btn-apply-filters text-white" id="apply-filters">Appliquer les
                     filtres</button>
             </div>

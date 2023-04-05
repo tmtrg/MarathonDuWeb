@@ -1,21 +1,29 @@
+// Attendre que le contenu du DOM soit chargé
 document.addEventListener('DOMContentLoaded', () => {
+    // Sélectionner les éléments nécessaires
     const searchIcon = document.querySelector('.fa-search');
     const searchInput = document.getElementById('search-input');
     const cards = document.querySelectorAll('.card');
 
+    // Ajouter un écouteur d'événements sur l'icône de recherche
     searchIcon.addEventListener('click', () => {
+        // Basculer la visibilité de l'entrée de recherche
         searchInput.classList.toggle('d-none');
+        // Mettre le focus sur l'entrée de recherche
         searchInput.focus();
 
+        // Arrêter la propagation de l'événement
         event.stopPropagation();
     });
 
+    // Ajouter un écouteur d'événements sur le document pour fermer la barre de recherche
     document.addEventListener('click', () => {
         if (!searchInput.classList.contains('d-none')) {
             searchInput.classList.add('d-none');
         }
     });
 
+    // Filtrer les cartes en fonction de la valeur entrée dans la barre de recherche
     searchInput.addEventListener('input', (event) => {
         const searchTerm = event.target.value.toLowerCase();
 
@@ -27,30 +35,25 @@ document.addEventListener('DOMContentLoaded', () => {
                 card.style.display = 'none';
             }
         }
-        
     });
 
+    // Masquer la barre de recherche lorsque la touche "Entrée" est enfoncée
     searchInput.addEventListener('keydown', (event) => {
-        // Vérifie si la touche "Entrée" est enfoncée
         if (event.key === 'Enter') {
-            // Empêche l'action par défaut de la touche "Entrée"
             event.preventDefault();
-    
-            // Masque la barre de recherche
             searchInput.classList.toggle('d-none');
         }
     });    
-
 });
 
-
-
+// Sélectionner les éléments nécessaires pour le filtrage
 const applyFiltersButton = document.getElementById('apply-filters');
 const saisonnaliteSelect = document.getElementById('saisonnalite');
 const localiteSelect = document.getElementById('localite');
 const typeAgricultureSelect = document.getElementById('type-agriculture');
 const prixSelect = document.getElementById('prix');
 
+// Appliquer les filtres lorsqu'on clique sur le bouton "Appliquer les filtres"
 applyFiltersButton.addEventListener('click', () => {
     const saisonnalite = saisonnaliteSelect.value;
     const localite = localiteSelect.value;
@@ -59,8 +62,6 @@ applyFiltersButton.addEventListener('click', () => {
 
     // Appliquez vos filtres en fonction des valeurs sélectionnées
     // Vous devrez ajouter des attributs de données ou des classes aux éléments de la carte pour pouvoir les filtrer en fonction des critères sélectionnés
-
-    // Exemple : Ajoutez des attributs de données aux éléments de la carte, tels que data-saisonnalite="in-season", data-localite="france", etc.
 
     for (const card of cards) {
         const cardSaisonnalite = card.getAttribute('data-saisonnalite');
@@ -80,6 +81,7 @@ applyFiltersButton.addEventListener('click', () => {
         }
     }
 
-    // Fermez le modal une fois les filtres appliqués
+    // Fermer le modal une fois les filtres appliqués
     $('#filterModal').modal('hide');
 });
+

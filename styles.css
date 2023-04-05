@@ -1,15 +1,19 @@
+/* Style général du corps du texte */
 body {
     font-family: Calibri, sans-serif;
 }
 
+/* Style de l'espacement sous l'en-tête */
 header {
     margin-bottom: 2rem;
 }
 
+/* Style des cartes pour les rendre cliquables */
 .card {
     cursor: pointer;
 }
 
+/* Style du titre de l'application dans la barre de navigation */
 .title {
     font-family: Calibri, sans-serif;
     font-size: 2rem;
@@ -18,16 +22,19 @@ header {
     margin: 0 auto;
 }
 
+/* Positionnement de la ligne dans la barre de navigation */
 .navbar .row {
     position: relative;
 }
 
+/* Positionnement des éléments de navigation dans la barre de navigation */
 .navbar-nav {
     position: absolute;
     top: 1;
     right: 0;
 }
 
+/* Style de l'entrée de recherche lorsqu'elle est masquée */
 #search-input {
     width: 0;
     height: 25px;
@@ -38,21 +45,24 @@ header {
     transition: width 0.3s ease-in-out;
 }
 
-
+/* Style de l'entrée de recherche lorsqu'elle est masquée (classe d-none) */
 #search-input.d-none {
     display: none;
 }
 
+/* Style de l'entrée de recherche lorsqu'elle est en focus */
 #search-input:focus {
     background-color: rgba(255, 255, 255, 0.1);
     width: 200px;
 }
 
+/* Style du bouton "Appliquer les filtres" */
 .btn-apply-filters {
     background-color: #28a745;
     border-color: #28a745;
 }
 
+/* Style du bouton "Appliquer les filtres" lors du survol de la souris */
 .btn-apply-filters:hover {
     background-color: #218838;
     border-color: #1e7e34;
