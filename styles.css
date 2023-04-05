@@ -17,7 +17,13 @@ header {
     flex-direction: column;
     justify-content: space-between;
     cursor: pointer;
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    margin-bottom: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+  
 
 #flexbox {
     display: flex;
