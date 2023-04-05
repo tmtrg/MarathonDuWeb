@@ -1,5 +1,6 @@
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color:#111111;
 }
 
 header {
@@ -27,7 +28,6 @@ header {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 15%;
 }
-
 
 #flexbox {
     display: flex;
