@@ -1,40 +1,48 @@
-/* Style général du corps du texte */
 body {
-    font-family: Calibri, sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-/* Style de l'espacement sous l'en-tête */
 header {
     margin-bottom: 2rem;
 }
 
-/* Style des cartes pour les rendre cliquables */
 .card {
     cursor: pointer;
 }
 
-/* Style du titre de l'application dans la barre de navigation */
+#flexbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;    
+}
+
 .title {
     font-family: Calibri, sans-serif;
     font-size: 2rem;
     color: #ffffff !important;
     font-weight: bold;
     margin: 0 auto;
+    padding-left: 0.5%;
 }
 
-/* Positionnement de la ligne dans la barre de navigation */
+.logo {
+    width: 50px;
+    height: 50px;
+    padding-top: 0%;
+    margin-bottom: 20px;
+    margin: 0%;
+}
+
 .navbar .row {
     position: relative;
 }
 
-/* Positionnement des éléments de navigation dans la barre de navigation */
 .navbar-nav {
     position: absolute;
     top: 1;
     right: 0;
 }
 
-/* Style de l'entrée de recherche lorsqu'elle est masquée */
 #search-input {
     width: 0;
     height: 25px;
@@ -45,24 +53,21 @@ header {
     transition: width 0.3s ease-in-out;
 }
 
-/* Style de l'entrée de recherche lorsqu'elle est masquée (classe d-none) */
+
 #search-input.d-none {
     display: none;
 }
 
-/* Style de l'entrée de recherche lorsqu'elle est en focus */
 #search-input:focus {
     background-color: rgba(255, 255, 255, 0.1);
     width: 200px;
 }
 
-/* Style du bouton "Appliquer les filtres" */
 .btn-apply-filters {
     background-color: #28a745;
     border-color: #28a745;
 }
 
-/* Style du bouton "Appliquer les filtres" lors du survol de la souris */
 .btn-apply-filters:hover {
     background-color: #218838;
     border-color: #1e7e34;

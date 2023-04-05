@@ -75,7 +75,7 @@ applyFiltersButton.addEventListener('click', () => {
             (prix === 'all' || prix === cardPrix);
 
         if (showCard) {
-            card.style.display = 'block';
+                        card.style.display = 'block';
         } else {
             card.style.display = 'none';
         }
