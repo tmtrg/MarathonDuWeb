@@ -168,7 +168,7 @@ async function chargerDonnees(categorie) {
             <p>Origine: ${produit.Origine || 'N/A'}</p>
             <p>Catégorie: ${produit.Categorie || 'N/A'}</p>
             <p>Saisonnalité: ${produit.Saisonnalite || 'N/A'}</p>
-            <p>CO2: ${produit.CO2 || 'N/A'} kgCO2e</p>
+            <p>CO2: ${produit.CO2 || 'N/A'} kgCO2e/${produit.Unite || 'N/A'}</p>
             <p>Type d'agriculture: ${produit.Type_agriculture || 'N/A'}</p>
         `;
 
