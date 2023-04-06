@@ -1,6 +1,6 @@
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color:#111111;
+    color: #111111;
 }
 
 header {
@@ -92,7 +92,8 @@ header {
 }
 
 .btn-back {
-    background-color: #28a745; /* La couleur de fond vert de la bande supérieure */
+    background-color: #28a745;
+    /* La couleur de fond vert de la bande supérieure */
     border: none;
     padding: 8px 16px;
     margin: 20px;
@@ -101,10 +102,22 @@ header {
 }
 
 .btn-back:hover {
-    background-color: #218838; /* Une nuance plus foncée de vert pour l'effet de survol */
+    background-color: #218838;
+    /* Une nuance plus foncée de vert pour l'effet de survol */
     text-decoration: none;
 }
 
 .card-img {
-    margin: 10px; /* ajustez cette valeur en fonction de l'espace souhaité */
+    margin: 60px;
+    /* ajustez cette valeur en fonction de l'espace souhaité */
+}
+
+.details {
+    margin-left: 100px;
+}
+
+.product-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
