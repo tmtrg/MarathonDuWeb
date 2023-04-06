@@ -102,8 +102,13 @@ console.log('Catégorie:', categorie);
 
 // Ajoutez le dictionnaire d'URL d'images
 const imageUrls = {
-    'pomme': 'https://example.com/images/pomme.jpg',
-    'fraise': 'https://example.com/images/fraise.jpg',
+    'ananas': 'https://cdn.pixabay.com/photo/2018/05/19/18/05/pineapple-3413953_1280.jpg',
+    'pomme': 'https://cdn.pixabay.com/photo/2016/08/14/11/56/apples-1592588_1280.jpg',
+    'fraise': 'https://cdn.pixabay.com/photo/2013/04/02/21/47/strawberries-99551_1280.jpg',
+    'poire': 'https://cdn.pixabay.com/photo/2016/07/22/09/59/fruits-1534494_1280.jpg',
+    'abricot': 'https://cdn.pixabay.com/photo/2016/07/30/10/51/apricots-1556851_1280.jpg',
+    'banane': 'https://cdn.pixabay.com/photo/2016/01/03/17/59/bananas-1119790_1280.jpg',
+    'kiwi': 'https://cdn.pixabay.com/photo/2018/02/11/19/09/kiwi-3146497_1280.jpg'
     // Ajoutez d'autres catégories et URL d'images ici
 };
 
