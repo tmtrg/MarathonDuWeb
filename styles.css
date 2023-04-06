@@ -113,7 +113,7 @@ header {
 }
 
 .details {
-    margin-left: 100px;
+    margin-left: 120px;
 }
 
 .product-container {
@@ -121,3 +121,8 @@ header {
     justify-content: center;
     align-items: center;
 }
+
+.graph-img {
+    margin-left: 0px;
+}
+
