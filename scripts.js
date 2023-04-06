@@ -43,7 +43,7 @@ const imageUrls = {
     'poivron': 'https://cdn.pixabay.com/photo/2014/10/22/21/54/bell-peppers-499068_1280.jpg',
     'pomme_de_terre': 'https://cdn.pixabay.com/photo/2014/08/06/20/32/potatoes-411975_1280.jpg',
     'radis': 'https://cdn.pixabay.com/photo/2016/08/27/11/21/radishes-1623915_1280.jpg',
-    'topinambourg': 'https://st.depositphotos.com/thumbs/1534655/image/3643/36439029/api_thumb_450.jpg?forcejpeg=true',
+    'topinambour': 'https://st.depositphotos.com/thumbs/1534655/image/3643/36439029/api_thumb_450.jpg?forcejpeg=true',
     'tomate': 'https://cdn.pixabay.com/photo/2011/03/16/16/01/tomatoes-5356_1280.jpg',
     'melon': 'https://cdn.pixabay.com/photo/2018/02/12/18/51/fruit-3148885_1280.jpg',
     'potiron': 'https://cdn.pixabay.com/photo/2013/12/14/09/13/freestyle-bite-228478_1280.jpg'
