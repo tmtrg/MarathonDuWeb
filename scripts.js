@@ -141,30 +141,43 @@ async function chargerDonnees(categorie) {
 
     // Parcourez les données filtrées et créez les éléments HTML
     for (const produit of filteredData) {
-        const divProduit = document.createElement('div');
+        const divRow = document.createElement('div');
+        divRow.classList.add('row', 'mb-4');
+
+        const divColImg = document.createElement('div');
+        divColImg.classList.add('col-md-4');
+
+        const divColDetails = document.createElement('div');
+        divColDetails.classList.add('col-md-8');
+
         const img = document.createElement('img');
+        img.classList.add('img-thumbnail', 'rounded-circle');
+        img.style.border = '1px solid #ddd';
+
         const divDetails = document.createElement('div');
-        const divGraphique = document.createElement('div');
+        divDetails.classList.add('details');
 
         // Ajoutez les attributs et le contenu aux éléments créés
         img.src = imageUrl;
+        img.alt = produit.Libelle || 'N/A';
 
         divDetails.innerHTML = `
-        <h3>${produit.Libelle || 'N/A'}</h3>
-        <p>Date: ${produit.Date || 'N/A'}</p>
-        <p>Prix: ${(produit.Prix || 0).toFixed(2)} €/${produit.Unite || 'N/A'}</p>
-        <p>Origine: ${produit.Origine || 'N/A'}</p>
-        <p>Catégorie: ${produit.Categorie || 'N/A'}</p>
-        <p>Saisonnalité: ${produit.Saisonnalite || 'N/A'}</p>
-        <p>CO2: ${produit.CO2 || 'N/A'} kg</p>
-        <p>Type d'agriculture: ${produit.Type_agriculture || 'N/A'}</p>
-    `;
-    
+            <h3>${produit.Libelle || 'N/A'}</h3>
+            <p>Date: ${produit.Date || 'N/A'}</p>
+            <p>Prix: ${(produit.Prix || 0).toFixed(2)} €/${produit.Unite || 'N/A'}</p>
+            <p>Origine: ${produit.Origine || 'N/A'}</p>
+            <p>Catégorie: ${produit.Categorie || 'N/A'}</p>
+            <p>Saisonnalité: ${produit.Saisonnalite || 'N/A'}</p>
+            <p>CO2: ${produit.CO2 || 'N/A'} kgCO2e</p>
+            <p>Type d'agriculture: ${produit.Type_agriculture || 'N/A'}</p>
+        `;
+
 
         // Ajoutez les éléments créés au conteneur
-        divProduit.appendChild(img);
-        divProduit.appendChild(divDetails);
-        divProduit.appendChild(divGraphique);
-        conteneur.appendChild(divProduit);
+        divColImg.appendChild(img);
+        divColDetails.appendChild(divDetails);
+        divRow.appendChild(divColImg);
+        divRow.appendChild(divColDetails);
+        conteneur.appendChild(divRow);
     }
 }
