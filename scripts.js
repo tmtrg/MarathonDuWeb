@@ -492,7 +492,7 @@ async function chargerDonnees(categorie) {
 
         const divColDetails = document.createElement('div');
         divColDetails.classList.add('col-md-4');
-        
+
         const divColGraph = document.createElement('div');
         divColGraph.classList.add('col-md-5');
 
@@ -518,6 +518,7 @@ async function chargerDonnees(categorie) {
             <h3>${produit.Libelle || 'N/A'}</h3>
             <p>Date : ${produit.Date || 'N/A'}</p>
             <p>Prix moyen : ${(produit.Prix || 0).toFixed(2)} €/${produit.Unite || 'N/A'}</p>
+            <p>Tendance du prix, sur les deux prochains mois (Estimation) : ${produit.Tendance || 'N/A'}</p>
             <p>Origine : ${produit.Origine || 'N/A'}</p>
             <p>Catégorie : ${produit.Categorie || 'N/A'}</p>
             <p>Saisonnalité : ${produit.Saisonnalite || 'N/A'}</p>
