@@ -492,7 +492,7 @@ async function chargerDonnees(categorie) {
 
         const divColDetails = document.createElement('div');
         divColDetails.classList.add('col-md-4');
-
+        
         const divColGraph = document.createElement('div');
         divColGraph.classList.add('col-md-5');
 
