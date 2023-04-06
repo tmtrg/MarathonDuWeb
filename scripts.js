@@ -151,6 +151,7 @@ async function chargerDonnees(categorie) {
         divColDetails.classList.add('col-md-8');
 
         const img = document.createElement('img');
+        img.classList.add('card-img');
         img.classList.add('img-thumbnail', 'rounded-circle');
         img.style.border = '1px solid #ddd';
 

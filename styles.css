@@ -104,3 +104,7 @@ header {
     background-color: #218838; /* Une nuance plus foncée de vert pour l'effet de survol */
     text-decoration: none;
 }
+
+.card-img {
+    margin: 10px; /* ajustez cette valeur en fonction de l'espace souhaité */
+}
